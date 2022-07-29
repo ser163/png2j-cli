@@ -27,6 +27,11 @@ var rootCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		if (src == "") || (dst == "") {
 			fmt.Println("require source and output file")
+			fmt.Println()
+			err := cmd.Help()
+			if err != nil {
+				return
+			}
 			os.Exit(1)
 		}
 		if width == 0 && height == 0 {
@@ -40,6 +45,12 @@ var rootCmd = &cobra.Command{
 			// width and height
 			if width < 1 || height < 1 {
 				fmt.Println("width and height must be greater than 0")
+				fmt.Println()
+				err := cmd.Help()
+				if err != nil {
+					return
+				}
+				os.Exit(1)
 			}
 			// resize
 			err := lib.ConvertToJpg(src, dst, width, height, quality)
