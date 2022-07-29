@@ -19,7 +19,7 @@ var quality uint8
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "png2j-cli",
+	Use:   "png2j",
 	Short: "A simple command-line tool for converting PNG files to JPG files.",
 	Long:  `A simple command-line tool for converting PNG files to JPG files.`,
 	// Uncomment the following line if your bare application
