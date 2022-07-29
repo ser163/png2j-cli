@@ -19,6 +19,20 @@ $ go mod download
 $ go build -o png2j
 ```
 ## Usage
+```shell
+
+Usage:
+  png2j [flags]
+
+Flags:
+  -e, --height uint     height of output JPG file
+  -h, --help            help for png2j
+  -o, --output string   output JPG file
+  -q, --quality uint8   quality value: 1-100 (default 100)
+  -s, --source string   source PNG file
+  -w, --width uint      width of output JPG file
+
+```
 Converting a PNG image:
 ```shell
 $ png2j -s ./image/go.png -o ./image/go.png.jpg
